@@ -171,8 +171,6 @@ Quick">
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/727603601@qq.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="https://github.com/summerwait" title="GitHub"></a>
                             
                                 <a class="fa Coding" href="https://coding.net/u/summerwait" title="Coding"></a>
@@ -244,8 +242,6 @@ Quick">
             </nav>
             <nav class="header-nav">
                         <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="/727603601@qq.com" title="Email"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/summerwait" title="GitHub"></a>
                             
@@ -382,6 +378,25 @@ Quick">
 
 
     
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/14/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2017/02/14/hello-world/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"summerwait"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
 
 
 
@@ -442,6 +457,22 @@ Quick">
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 1;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 
